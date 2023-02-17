@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins/poppins-regular-webfont.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes reversed-bounce {
+  0%,
+  100% {
+    transform: translateY(25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-reversed-bounce {
+  animation: reversed-bounce 1s infinite;
+}
